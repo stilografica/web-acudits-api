@@ -11,8 +11,12 @@ const getJoke = async () => { //Funció asíncrona per cridar l'api
     }
   });
   let data = await response.json(); 
-  console.log(data.joke); //Mostro per consola l'acudit que és troba a un objecte amb la key "joke"
+  p.innerText = data.joke; //Mostro a la <p> l'acudit que és troba a un objecte amb la key "joke"
 }
+
+let p = document.createElement("p"); //Es crea un element <p>
+document.getElementById("joke").appendChild(p); //Introdueixo <p> com a fill de joke
+
 //Quan faig click al botó crido a la funció getJoke
 document.getElementById("btn").addEventListener("click", () => { 
   getJoke();
