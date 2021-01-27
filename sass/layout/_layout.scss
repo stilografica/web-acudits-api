@@ -1,0 +1,92 @@
+//Montserrat font
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+//Variables
+$white: #fff;
+$black: #2f2d2f;
+$aqua: #36cdd9;
+
+//Mixins
+@mixin dropShadow {
+    box-shadow: 
+        0 4px 8px rgba(0,0,0,0.08), 
+        0 8px 16px rgba(0,0,0,0.08),
+}
+
+body {
+	height: 100vh;
+	background-image: url("../img/pexels-helena-lopes.jpg");
+	background-color: rgba(255, 255, 255, 0.5);
+	background-blend-mode: lighten;
+	@media screen and (max-width:790px){
+		height: auto;
+		//overflow-x: hidden;
+		overflow-y: auto;
+	  }
+}
+aside{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.25rem;
+	font-weight: 500;
+	color: $black;
+	padding: 1.5rem;
+}
+main{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 85vh;
+	
+	@media screen and (max-width:790px){
+		display: block;
+	  }
+
+
+	article:only-child{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	background-color: $white;
+	width: 45%;
+	min-height: 480px;
+	text-align: center;
+	border-radius: 25px;
+	padding: 2rem 6rem 2rem 6rem;
+	@include dropShadow;
+	@media screen and (max-width:790px){
+		margin: auto;
+	  }
+
+	}	
+	h1{
+		justify-self: flex-start;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 2.5rem;
+		font-weight: 600;
+		color: $black;
+	}
+	#joke p {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 1.5rem;
+		font-weight: 500;
+		color: $black;
+		line-height: 1.8rem;
+		padding: 2rem 0 2rem 0;
+	}
+	button {
+		background-color: $aqua;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 1rem;
+		font-weight: 400;
+		color: $white;
+		border: none;
+		padding: 1.5rem 3.3rem 1.5rem 3.3rem;
+		border-radius: 15px;
+		cursor: pointer;
+
+		&:focus{
+			outline: none;
+		}
+	}
+}
