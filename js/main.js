@@ -1,17 +1,20 @@
 "use strict";
 
-//Nivell 2 - Exercici 2
+//Nivell 3 - Exercici 5
 
-const url = "https://icanhazdadjoke.com/"; //Url acudits
+const url = ["https://api.chucknorris.io/jokes/random", "https://icanhazdadjoke.com"]; //Array amb les URLs de les APIs
 
 const getJoke = async () => { //Funció asíncrona per cridar l'api
-  let response = await fetch(url, { 
+  let index = Math.floor(Math.random()*url.length); //Número aleatori
+  let urlActual = url[index]; //Selecciono la url amb aquest index
+  let response = await fetch(urlActual, { 
     headers: {
       'Accept': 'application/json' 
     }
   });
   let data = await response.json(); 
-  p.innerText = data.joke; //Mostro a la <p> l'acudit que és troba a un objecte amb la key "joke"
+  const joke = [data.value, data.joke]; //Array amb les key dels objectes de cada api d'acudits
+  p.innerText = joke[index];//Mostro a la <p> l'acudit
 }
 
 let p = document.createElement("p"); //Es crea un element <p>
