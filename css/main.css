@@ -1,0 +1,106 @@
+/* Partials*/
+/* http://meyerweb.com/eric/tools/scss/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  height: 100vh;
+  background-image: url("../img/pexels-helena-lopes.jpg");
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: lighten; }
+  @media screen and (max-width: 790px) {
+    body {
+      height: auto;
+      overflow-y: auto; } }
+
+aside {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #2f2d2f;
+  padding: 1.5rem; }
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh; }
+  @media screen and (max-width: 790px) {
+    main {
+      display: block; } }
+  main article:only-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    width: 45%;
+    min-height: 480px;
+    text-align: center;
+    border-radius: 25px;
+    padding: 2rem 6rem 2rem 6rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08), 0 8px 16px rgba(0, 0, 0, 0.08); }
+    @media screen and (max-width: 790px) {
+      main article:only-child {
+        margin: auto; } }
+  main h1 {
+    justify-self: flex-start;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #2f2d2f; }
+  main #joke p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #2f2d2f;
+    line-height: 1.8rem;
+    padding: 2rem 0 2rem 0; }
+  main button {
+    background-color: #36cdd9;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+    border: none;
+    padding: 1.5rem 3.3rem 1.5rem 3.3rem;
+    border-radius: 15px;
+    cursor: pointer; }
+    main button:focus {
+      outline: none; }
+
+/*# sourceMappingURL=main.css.map */
